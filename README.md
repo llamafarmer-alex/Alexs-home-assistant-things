@@ -9,7 +9,7 @@ Home Assistant allows me to integrate various smart devices and services into a 
 My journey with Home Assistant began out of a desire to simplify the management of my smart home setup. One of the frustrations I encountered was the reliance on a shared calendar to trigger specific home modes, such as Holiday Mode which involves stopping certain daily automations from running. I found myself needing to manually adjust settings to accommodate different scenarios, which led to inefficiencies and inconsistencies in my automation routines.
 
 ### Introducing My Blueprints
-Driven by the need for a more seamless and automated solution, I decided to create my first two blueprints: **Calendar Event Trigger On** and **Calendar Event Trigger Off**. 
+Driven by the need for a more seamless and automated solution, I decided to create my first two blueprints: [**Calendar Event Trigger On**](https://github.com/llamafarmer-alex/HomeAssistantBlueprints/blob/main/Calendar_Event_Trigger_On.yaml) and [**Calendar Event Trigger Off**](https://github.com/llamafarmer-alex/HomeAssistantBlueprints/blob/main/Calendar_Event_Trigger_Off.yaml). 
 
 With these blueprints, I aim to simplify the process of managing home modes and automations, making it easier for others in the Home Assistant community to benefit from more streamlined and efficient home automation setups. The current version of the blueprints are for only single calendar events but I am looking to make multiple events supported in the future.
 
@@ -17,25 +17,25 @@ With these blueprints, I aim to simplify the process of managing home modes and 
 <details>
 <summary>Home Assistant Blueprint: Calendar Event Trigger On</summary>
 
-# Home Assistant Blueprint: Calendar Event Trigger On
+## [Home Assistant Blueprint: Calendar Event Trigger On](https://github.com/llamafarmer-alex/HomeAssistantBlueprints/blob/main/Calendar_Event_Trigger_Off.yaml)
 Trigger an automation based on the start of specific calendar events in Home Assistant.
 
-## Description
+### Description
 This Home Assistant blueprint enables users to create automations triggered by the start of specific calendar events. With this blueprint, users can select a calendar entity and specify the name of the event to trigger the automation. Additionally, users can choose an input boolean to toggle and define additional actions to execute when the event starts. This blueprint provides flexibility and customization for automating tasks based on the start of calendar events.
 
-## Features
+### Features
 Flexible Event Triggering: Trigger automations based on the end of specific calendar events.
 Customizable Actions: Define additional actions to perform when the event ends, such as turning off a boolean or executing custom sequences.
 Easy Setup: Simply select the calendar entity, specify the event name, and choose the actions to execute.
 
-## Usage
+### Usage
 Install this Blueprint in your Home Assistant instance.
 Create a new automation using this Blueprint.
 Select the calendar entity to monitor and specify the name of the event.
 Optionally, choose an input boolean to turn on and define additional actions.
 Save the automation and enjoy automated actions based on the end of calendar events!
 
-## Notes
+### Notes
 Ensure your calendar events are correctly synchronized with Home Assistant for accurate triggering.
 Additional actions will only be executed if specified in the automation configuration.
 
@@ -45,25 +45,25 @@ Enjoy automating your calendar events with ease using the Calendar Event Trigger
 <details>
 <summary>Home Assistant Blueprint: Calendar Event Trigger Off</summary>
 
-# Home Assistant Blueprint: Calendar Event Trigger Off
+## [Home Assistant Blueprint: Calendar Event Trigger Off](https://github.com/llamafarmer-alex/HomeAssistantBlueprints/blob/main/Calendar_Event_Trigger_Off.yaml)
 Automate actions based on the end of specific calendar events in Home Assistant.
 
-## Description
+### Description
 This Home Assistant blueprint allows you to trigger automations based on the end of calendar events. You can select a calendar entity to monitor for events and specify the name of the event to trigger the automation. Additionally, you can choose an input boolean to toggle and define additional actions to execute when the event ends.
 
-## Features
+### Features
 Flexible Event Triggering: Trigger automations based on the end of specific calendar events.
 Customizable Actions: Define additional actions to perform when the event ends, such as turning off a boolean or executing custom sequences.
 Easy Setup: Simply select the calendar entity, specify the event name, and choose the actions to execute.
 
-## Usage
+### Usage
 Install this Blueprint in your Home Assistant instance.
 Create a new automation using this Blueprint.
 Select the calendar entity to monitor and specify the name of the event.
 Optionally, choose an input boolean to toggle and define additional actions.
 Save the automation and enjoy automated actions based on the end of calendar events!
 
-## Notes
+### Notes
 Ensure your calendar events are correctly synchronized with Home Assistant for accurate triggering.
 Additional actions will only be executed if specified in the automation configuration.
 
