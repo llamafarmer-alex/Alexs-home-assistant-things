@@ -1,0 +1,66 @@
+blueprint:
+  name: Calendar Event Trigger On
+  description: |
+    Trigger an automation based on a specific calendar event starting.
+  
+  domain: automation
+  input:
+    calendar_entity:
+      name: Calendar Entity
+      description: Select the calendar entity to monitor for events. FYI Google calendar can take up to 15 minutes to sync once you add an event.
+      selector:
+        entity:
+          domain: calendar
+    event_name:
+      name: Event Name
+      description: The name of the event to trigger the automation. e.g "Alex Holiday" or "Green Bin". Please note the event name is specific so "Alex on Holiday" wouldn't trigger.
+      default: ''
+      selector:
+        text:
+    input_boolean:
+      name: Input Boolean
+      description: Select an existing input boolean or enter a new one.
+      default: ''
+      selector:
+        entity:
+          domain: input_boolean
+    additional_actions:
+      name: Additional Actions
+      description: Addition actions you would like the automation to perform when the event occurs.
+      default: []
+      selector:
+        action: {}
+
+mode: single
+
+trigger:
+  platform: state
+  entity_id: !input calendar_entity
+  to: 'on'
+  for: '00:00:01'
+
+variables:
+  event_name: !input event_name
+  input_boolean: !input input_boolean
+  additional_actions: !input additional_actions
+
+condition:
+  - condition: template
+    value_template: "{{ event_name == trigger.to_state.attributes.message }}"
+
+action:
+  - choose:
+    - conditions: "{{ input_boolean != '' }}"
+      sequence:
+        - service: input_boolean.turn_on
+          target:
+            entity_id: "{{ input_boolean }}"
+    default: []
+  - choose:
+    - conditions: "{{ additional_actions }}"
+      sequence:
+        - service: homeassistant.execute
+          data_template:
+            sequence: "{{ additional_actions }}"
+    default: []
+
