@@ -9,7 +9,7 @@ Home Assistant allows me to integrate various smart devices and services into a 
 My journey with Home Assistant began out of a desire to simplify the management of my smart home setup. One of the frustrations I encountered was the reliance on a shared calendar to trigger specific home modes, such as Holiday Mode which involves stopping certain daily automations from running. I found myself needing to manually adjust settings to accommodate different scenarios, which led to inefficiencies and inconsistencies in my automation routines.
 
 ### Introducing My Blueprints
-Driven by the need for a more seamless and automated solution, I decided to create my first two blueprints: [**Calendar Event Trigger On**](https://github.com/llamafarmer-alex/HomeAssistantBlueprints/new/main?filename=README.md#home-assistant-blueprint-calendar-event-trigger-on) and [**Calendar Event Trigger Off**](https://github.com/llamafarmer-alex/HomeAssistantBlueprints/new/main?filename=README.md#home-assistant-blueprint-calendar-event-trigger-off). 
+Driven by the need for a more seamless and automated solution, I decided to create my first two blueprints: **Calendar Event Trigger On** and **Calendar Event Trigger Off**. 
 
 With these blueprints, I aim to simplify the process of managing home modes and automations, making it easier for others in the Home Assistant community to benefit from more streamlined and efficient home automation setups. The current version of the blueprints are for only single calendar events but I am looking to make multiple events supported in the future.
 
